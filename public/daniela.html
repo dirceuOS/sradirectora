@@ -889,4 +889,194 @@ addEventListener('hashchange', function () {
 });
 </script>
 
+<style>
+/* ============ Refresh moderno 2026: elegante, dinámico, transparencias ============ */
+:root {
+  --anil-profundo: #1e352f;
+  --rosa-suave: #ff5ca8;
+  --vidrio: rgba(245, 241, 232, 0.08);
+  --vidrio-borde: rgba(245, 241, 232, 0.16);
+  --sombra-suave: 0 18px 50px -18px rgba(30, 53, 47, 0.28);
+  --sombra-rosa: 0 14px 40px -12px rgba(255, 45, 143, 0.45);
+  --radio: 18px;
+}
+
+html { scroll-padding-top: 96px; }
+
+body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(255, 45, 143, 0.06), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(42, 73, 65, 0.07), transparent 55%),
+    var(--cal);
+}
+
+/* ----- Navegación: barra flotante de vidrio ----- */
+.nav {
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  margin-inline: auto;
+  width: min(calc(100% - 32px), 1180px);
+  border-radius: 999px;
+  background: rgba(30, 53, 47, 0.72);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid var(--vidrio-borde);
+  box-shadow: 0 12px 40px -12px rgba(30, 53, 47, 0.5);
+  transition: box-shadow 0.35s ease, background 0.35s ease;
+}
+.nav:hover { background: rgba(30, 53, 47, 0.85); }
+.nav__enlaces a {
+  border-bottom: none;
+  position: relative;
+  transition: opacity 0.25s ease;
+}
+.nav__enlaces a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--rosa-suave);
+  transition: right 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav__enlaces a:hover::after { right: 0; }
+.nav__contacto {
+  border-radius: 999px;
+  padding: 9px 20px;
+  box-shadow: var(--sombra-rosa);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.nav__contacto:hover { transform: translateY(-2px); }
+
+/* ----- Portada: profundidad y glow ----- */
+.portada {
+  background:
+    radial-gradient(1000px 620px at 88% 8%, rgba(255, 45, 143, 0.22), transparent 58%),
+    radial-gradient(800px 600px at -8% 90%, rgba(245, 241, 232, 0.08), transparent 55%),
+    linear-gradient(160deg, var(--anil) 0%, var(--anil-profundo) 100%);
+}
+.portada__nombre {
+  background: linear-gradient(115deg, var(--cal) 55%, rgba(255, 92, 168, 0.9) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.portada__retrato {
+  border: 1px solid var(--vidrio-borde);
+  border-radius: var(--radio);
+  box-shadow: 18px 18px 0 -6px var(--rosa), 0 30px 70px -25px rgba(0, 0, 0, 0.55);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+}
+.portada__retrato:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 22px 22px 0 -6px var(--rosa), 0 40px 90px -25px rgba(0, 0, 0, 0.6);
+}
+
+/* ----- Botones: píldoras con micro-interacción ----- */
+.boton {
+  border-radius: 999px;
+  border-width: 1.5px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.boton:hover { transform: translateY(-2px); }
+.boton:active { transform: translateY(0); }
+.boton--lleno {
+  background: linear-gradient(120deg, var(--rosa) 0%, var(--rosa-suave) 100%);
+  border-color: transparent;
+  box-shadow: var(--sombra-rosa);
+}
+.boton--lleno:hover {
+  background: linear-gradient(120deg, var(--rosa-suave) 0%, var(--rosa) 100%);
+  border-color: transparent;
+  color: var(--sobre-rosa);
+  box-shadow: 0 20px 50px -12px rgba(255, 45, 143, 0.6);
+}
+.boton--borde {
+  background: var(--vidrio);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-color: var(--vidrio-borde);
+}
+.boton--borde:hover { border-color: var(--cal); background: rgba(245, 241, 232, 0.16); }
+.boton--oscuro { border-radius: 999px; border-width: 1.5px; }
+.boton--oscuro:hover { box-shadow: var(--sombra-suave); }
+
+/* ----- Secciones alternas: más suaves ----- */
+.seccion--sombra {
+  background:
+    radial-gradient(700px 400px at 100% 0%, rgba(255, 45, 143, 0.05), transparent 60%),
+    var(--cal-sombra);
+}
+
+/* ----- Listas y filas: tarjetas al pasar el cursor ----- */
+.linea__item, .formacion__item, .proyecto, .registro__item, .hoy__fila, .contacto__fila {
+  transition: background 0.3s ease, padding-inline 0.3s ease;
+}
+.linea__item:hover, .formacion__item:hover, .proyecto:hover, .registro__item:hover, .hoy__fila:hover {
+  background: rgba(42, 73, 65, 0.045);
+  padding-inline: 14px;
+  border-radius: 12px;
+}
+.contacto__fila:hover { background: var(--vidrio); padding-inline: 14px; border-radius: 12px; }
+
+.linea__periodo, .registro__fecha, .formacion__anio {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* ----- Chips de invitación ----- */
+.invitar__lista a {
+  border-radius: 999px;
+  border-width: 1.5px;
+  background: var(--vidrio);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+.invitar__lista a:hover {
+  border-color: var(--rosa);
+  background: rgba(255, 45, 143, 0.14);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-rosa);
+}
+
+/* ----- Contacto: degradado con glow rosa ----- */
+.contacto {
+  background:
+    radial-gradient(900px 500px at 90% 100%, rgba(255, 45, 143, 0.18), transparent 60%),
+    linear-gradient(160deg, var(--anil) 0%, var(--anil-profundo) 100%);
+}
+.pie { background: var(--anil-profundo); }
+
+/* ----- Cenefas: transición suave entre bloques ----- */
+.cenefa { opacity: 0.9; }
+
+/* ----- Aparición al hacer scroll ----- */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.seccion__cabecera, .bio__texto, .hoy, .linea__item, .formacion__item,
+.proyecto, .registro__grupo, .registro__item, .vacio, .medios,
+.contacto__datos, .invitar, .descargas, .portada__grid > * {
+  animation: aparecer 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+.portada__grid > * { animation-timeline: auto; }
+.portada__grid > *:nth-child(2) { animation-delay: 0.15s; }
+
+@supports not (animation-timeline: view()) {
+  .seccion__cabecera, .bio__texto, .hoy, .linea__item, .formacion__item,
+  .proyecto, .registro__grupo, .registro__item, .vacio, .medios,
+  .contacto__datos, .invitar, .descargas { animation: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
 </body></html>
