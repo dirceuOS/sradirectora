@@ -665,7 +665,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <div>
         <dl class="contacto__datos">
           <div class="contacto__fila"><dt>Correo</dt><dd><a href="mailto:daniela@sradirectora.com">daniela@sradirectora.com</a></dd></div>
-          <div class="contacto__fila"><dt>Teléfono</dt><dd><a href="tel:+528115313235">+52 81 1531 3235</a></dd></div>
+          <div class="contacto__fila"><dt>Teléfono</dt><dd><a class="contacto__whatsapp" href="https://wa.me/528115313235?text=Hola" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-2 .9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.5.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 1c.2.1.4.2.4.3.1.2.1.6-.1 1z"/></svg>+52 81 1531 3235</a></dd></div>
           <div class="contacto__fila"><dt>Instagram</dt><dd><a href="https://www.instagram.com/sra.directora" target="_blank" rel="noopener">@sra.directora</a></dd></div>
           <div class="contacto__fila"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/daniela-perez-borges-0377b819" target="_blank" rel="noopener">Daniela Pérez Borges</a></dd></div>
           <div class="contacto__fila"><dt>Ciudad</dt><dd>San Pedro Garza García, N.L., México</dd></div>
@@ -905,9 +905,10 @@ html { scroll-padding-top: 96px; }
 
 body {
   background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(255, 45, 143, 0.06), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(42, 73, 65, 0.07), transparent 55%),
-    var(--cal);
+    radial-gradient(1400px 800px at 88% -12%, rgba(255, 45, 143, 0.14), transparent 62%),
+    radial-gradient(1100px 700px at -12% 28%, rgba(42, 73, 65, 0.14), transparent 58%),
+    radial-gradient(900px 600px at 100% 92%, rgba(255, 92, 168, 0.10), transparent 60%),
+    linear-gradient(180deg, #faf7f0 0%, var(--cal) 45%, #efe9db 100%);
 }
 
 /* ----- Navegación: barra flotante de vidrio ----- */
@@ -1004,8 +1005,9 @@ body {
 /* ----- Secciones alternas: más suaves ----- */
 .seccion--sombra {
   background:
-    radial-gradient(700px 400px at 100% 0%, rgba(255, 45, 143, 0.05), transparent 60%),
-    var(--cal-sombra);
+    radial-gradient(900px 520px at 100% 0%, rgba(255, 45, 143, 0.12), transparent 62%),
+    radial-gradient(800px 480px at 0% 100%, rgba(42, 73, 65, 0.10), transparent 58%),
+    linear-gradient(180deg, var(--cal-sombra) 0%, #e7e0d2 100%);
 }
 
 /* ----- Listas y filas: tarjetas al pasar el cursor ----- */
@@ -1043,10 +1045,15 @@ body {
 /* ----- Contacto: degradado con glow rosa ----- */
 .contacto {
   background:
-    radial-gradient(900px 500px at 90% 100%, rgba(255, 45, 143, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 90% 100%, rgba(255, 45, 143, 0.28), transparent 62%),
+    radial-gradient(700px 420px at 4% 4%, rgba(255, 92, 168, 0.14), transparent 58%),
     linear-gradient(160deg, var(--anil) 0%, var(--anil-profundo) 100%);
 }
-.pie { background: var(--anil-profundo); }
+.pie {
+  background:
+    radial-gradient(700px 380px at 88% 0%, rgba(255, 45, 143, 0.14), transparent 60%),
+    var(--anil-profundo);
+}
 
 /* ----- Cenefas: transición suave entre bloques ----- */
 .cenefa { opacity: 0.9; }
@@ -1077,6 +1084,76 @@ body {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* ----- Contacto destacado: tarjetas con acento por campo ----- */
+.contacto__datos { border-top: none; display: grid; gap: 12px; }
+.contacto__fila {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--vidrio);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--vidrio-borde);
+  border-radius: 16px;
+  padding: 16px 22px;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contacto__fila:hover {
+  transform: translateY(-2px);
+  background: rgba(245, 241, 232, 0.13);
+  border-color: rgba(255, 92, 168, 0.55);
+  box-shadow: 0 16px 38px -18px rgba(0, 0, 0, 0.55);
+}
+.contacto__fila dt {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--cal);
+  opacity: 0.72;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  min-width: 118px;
+}
+.contacto__fila dt::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+  box-shadow: 0 0 10px 1px currentColor;
+}
+.contacto__fila:nth-child(1) dt::before { background: var(--rosa-suave); color: var(--rosa-suave); }
+.contacto__fila:nth-child(2) dt::before { background: #2fe173; color: #2fe173; }
+.contacto__fila:nth-child(3) dt::before { background: #ff7a45; color: #ff7a45; }
+.contacto__fila:nth-child(4) dt::before { background: #5aa9ff; color: #5aa9ff; }
+.contacto__fila:nth-child(5) dt::before { background: var(--cal); color: var(--cal); }
+.contacto__fila dd { font-size: 1.12rem; }
+.contacto__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(120deg, #2fe173 0%, #128c7e 100%);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 999px;
+  box-shadow: 0 14px 34px -14px rgba(37, 211, 102, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.contacto__whatsapp:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+  box-shadow: 0 18px 42px -14px rgba(37, 211, 102, 0.75);
+}
+.contacto__whatsapp svg { flex: none; }
+@media (max-width: 560px) {
+  .contacto__fila { flex-wrap: wrap; gap: 6px 12px; padding: 14px 16px; }
+  .contacto__fila dt { min-width: 0; }
 }
 </style>
 </body></html>
