@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#262626}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Daniela Pérez Borges (Copy)</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,15 +7,15 @@
 <style>
 :root {
   /* Paleta autorizada, universo "Notas de Dirección / finanzas serias" */
-  --anil: #2a4941;          /* Pantone 5535 C (verde): fondo principal */
+  --anil: #142a43;          /* Pantone 5535 C (verde): fondo principal */
   --cal: #f5f1e8;           /* Pantone ~9224 C (crema): fondo claro y texto sobre verde */
   --tinta: #262626;         /* Black 6 C: texto principal */
   --rosa: #ff2d8f;          /* Pantone ~806 C (hot pink): acento, el color favorito de Daniela */
-  --sobre-rosa: #1c1c1c;    /* texto sobre rosa: contraste 4.9:1 (la crema sobre rosa no llega a 4.5:1) */
+  --sobre-rosa: #262626;    /* texto sobre rosa: contraste 4.9:1 (la crema sobre rosa no llega a 4.5:1) */
   /* Derivados neutros para legibilidad */
-  --cal-sombra: #ece6d9;    /* crema un tono más oscuro, para alternar secciones */
-  --piedra: #5e5851;        /* gris cálido oscuro para texto secundario (contraste AA sobre crema) */
-  --linea: rgba(38, 38, 38, 0.2);
+  --cal-sombra: #dbe3ee;    /* crema un tono más oscuro, para alternar secciones */
+  --piedra: #262626;        /* gris cálido oscuro para texto secundario (contraste AA sobre crema) */
+  --linea: rgba(139, 133, 125, 0.2);
   --linea-clara: rgba(245, 241, 232, 0.3);
 
   --serif: "Young Serif", Georgia, "Times New Roman", serif;
@@ -112,8 +112,8 @@ img, svg { display: block; max-width: 100%; }
 .nav__enlaces a:hover { opacity: 1; border-bottom-color: var(--cal); }
 .nav__contacto {
   display: none;
-  background: var(--rosa);
-  color: var(--sobre-rosa);
+  background: var(--anil);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -173,7 +173,7 @@ img, svg { display: block; max-width: 100%; }
   text-decoration: none;
   border: 2px solid var(--cal);
 }
-.boton--lleno { background: var(--rosa); border-color: var(--rosa); color: var(--sobre-rosa); }
+.boton--lleno { background: var(--anil); border-color: var(--rosa); color: #fff; }
 .boton--lleno:hover { background: var(--cal); border-color: var(--cal); color: var(--anil); }
 .boton--borde { color: var(--cal); border-color: var(--linea-clara); }
 .boton--borde:hover { border-color: var(--cal); }
@@ -412,7 +412,7 @@ img, svg { display: block; max-width: 100%; }
 .articulo__fuente { margin-top: 28px; font-size: 0.95rem; color: var(--piedra); max-width: 40rem; }
 
 /* ---------- Rosa: detalles de personalidad ---------- */
-::selection { background: var(--rosa); color: var(--sobre-rosa); }
+::selection { background: var(--cal-sombra); color: #fff; }
 .registro__enlace, .proyecto__enlace, .vacio a, .articulo__volver a, .articulo__texto a,
 .articulo__autora a, .articulo__fuente a {
   text-decoration-color: var(--rosa);
@@ -892,11 +892,11 @@ addEventListener('hashchange', function () {
 <style>
 /* ============ Refresh moderno 2026: elegante, dinámico, transparencias ============ */
 :root {
-  --anil-profundo: #1e352f;
-  --rosa-suave: #ff5ca8;
+  --anil-profundo: #262626;
+  --rosa-suave: #ff2d8f;
   --vidrio: rgba(245, 241, 232, 0.08);
   --vidrio-borde: rgba(245, 241, 232, 0.16);
-  --sombra-suave: 0 18px 50px -18px rgba(30, 53, 47, 0.28);
+  --sombra-suave: 0 18px 50px -18px rgba(38, 38, 38, 0.28);
   --sombra-rosa: 0 14px 40px -12px rgba(255, 45, 143, 0.45);
   --radio: 18px;
 }
@@ -906,9 +906,9 @@ html { scroll-padding-top: 96px; }
 body {
   background:
     radial-gradient(1400px 800px at 88% -12%, rgba(255, 45, 143, 0.14), transparent 62%),
-    radial-gradient(1100px 700px at -12% 28%, rgba(42, 73, 65, 0.14), transparent 58%),
-    radial-gradient(900px 600px at 100% 92%, rgba(255, 92, 168, 0.10), transparent 60%),
-    linear-gradient(180deg, #faf7f0 0%, var(--cal) 45%, #efe9db 100%);
+    radial-gradient(1100px 700px at -12% 28%, rgba(20, 42, 67, 0.14), transparent 58%),
+    radial-gradient(900px 600px at 100% 92%, rgba(255, 45, 143, 0.10), transparent 60%),
+    linear-gradient(180deg, #f5f1e8 0%, var(--cal) 45%, #f4efe6 100%);
 }
 
 /* ----- Navegación: barra flotante de vidrio ----- */
@@ -917,14 +917,14 @@ body {
   margin-inline: auto;
   width: min(calc(100% - 32px), 1180px);
   border-radius: 999px;
-  background: rgba(30, 53, 47, 0.72);
+  background: rgba(38, 38, 38, 0.72);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
   backdrop-filter: blur(18px) saturate(1.4);
   border: 1px solid var(--vidrio-borde);
-  box-shadow: 0 12px 40px -12px rgba(30, 53, 47, 0.5);
+  box-shadow: 0 12px 40px -12px rgba(38, 38, 38, 0.5);
   transition: box-shadow 0.35s ease, background 0.35s ease;
 }
-.nav:hover { background: rgba(30, 53, 47, 0.85); }
+.nav:hover { background: rgba(38, 38, 38, 0.85); }
 .nav__enlaces a {
   border-bottom: none;
   position: relative;
@@ -957,7 +957,7 @@ body {
     linear-gradient(160deg, var(--anil) 0%, var(--anil-profundo) 100%);
 }
 .portada__nombre {
-  background: linear-gradient(115deg, var(--cal) 55%, rgba(255, 92, 168, 0.9) 130%);
+  background: linear-gradient(115deg, var(--cal) 55%, rgba(255, 45, 143, 0.9) 130%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -965,12 +965,12 @@ body {
 .portada__retrato {
   border: 1px solid var(--vidrio-borde);
   border-radius: var(--radio);
-  box-shadow: 18px 18px 0 -6px var(--rosa), 0 30px 70px -25px rgba(0, 0, 0, 0.55);
+  box-shadow: 18px 18px 0 -6px var(--rosa), 0 30px 70px -25px rgba(38, 38, 38, 0.55);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
 }
 .portada__retrato:hover {
   transform: translateY(-6px) rotate(-0.6deg);
-  box-shadow: 22px 22px 0 -6px var(--rosa), 0 40px 90px -25px rgba(0, 0, 0, 0.6);
+  box-shadow: 22px 22px 0 -6px var(--rosa), 0 40px 90px -25px rgba(38, 38, 38, 0.6);
 }
 
 /* ----- Botones: píldoras con micro-interacción ----- */
@@ -982,14 +982,14 @@ body {
 .boton:hover { transform: translateY(-2px); }
 .boton:active { transform: translateY(0); }
 .boton--lleno {
-  background: linear-gradient(120deg, var(--rosa) 0%, var(--rosa-suave) 100%);
+  background: linear-gradient(120deg, var(--anil) 0%, var(--anil-profundo) 100%);
   border-color: transparent;
   box-shadow: var(--sombra-rosa);
 }
 .boton--lleno:hover {
-  background: linear-gradient(120deg, var(--rosa-suave) 0%, var(--rosa) 100%);
+  background: linear-gradient(120deg, var(--anil-profundo) 0%, var(--anil) 100%);
   border-color: transparent;
-  color: var(--sobre-rosa);
+  color: #fff;
   box-shadow: 0 20px 50px -12px rgba(255, 45, 143, 0.6);
 }
 .boton--borde {
@@ -1006,8 +1006,8 @@ body {
 .seccion--sombra {
   background:
     radial-gradient(900px 520px at 100% 0%, rgba(255, 45, 143, 0.12), transparent 62%),
-    radial-gradient(800px 480px at 0% 100%, rgba(42, 73, 65, 0.10), transparent 58%),
-    linear-gradient(180deg, var(--cal-sombra) 0%, #e7e0d2 100%);
+    radial-gradient(800px 480px at 0% 100%, rgba(20, 42, 67, 0.10), transparent 58%),
+    linear-gradient(180deg, var(--cal-sombra) 0%, #f4efe6 100%);
 }
 
 /* ----- Listas y filas: tarjetas al pasar el cursor ----- */
@@ -1015,7 +1015,7 @@ body {
   transition: background 0.3s ease, padding-inline 0.3s ease;
 }
 .linea__item:hover, .formacion__item:hover, .proyecto:hover, .registro__item:hover, .hoy__fila:hover {
-  background: rgba(42, 73, 65, 0.045);
+  background: rgba(20, 42, 67, 0.045);
   padding-inline: 14px;
   border-radius: 12px;
 }
@@ -1046,7 +1046,7 @@ body {
 .contacto {
   background:
     radial-gradient(900px 520px at 90% 100%, rgba(255, 45, 143, 0.28), transparent 62%),
-    radial-gradient(700px 420px at 4% 4%, rgba(255, 92, 168, 0.14), transparent 58%),
+    radial-gradient(700px 420px at 4% 4%, rgba(255, 45, 143, 0.14), transparent 58%),
     linear-gradient(160deg, var(--anil) 0%, var(--anil-profundo) 100%);
 }
 .pie {
@@ -1103,8 +1103,8 @@ body {
 .contacto__fila:hover {
   transform: translateY(-2px);
   background: rgba(245, 241, 232, 0.13);
-  border-color: rgba(255, 92, 168, 0.55);
-  box-shadow: 0 16px 38px -18px rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 45, 143, 0.55);
+  box-shadow: 0 16px 38px -18px rgba(38, 38, 38, 0.55);
 }
 .contacto__fila dt {
   display: inline-flex;
@@ -1127,28 +1127,28 @@ body {
   box-shadow: 0 0 10px 1px currentColor;
 }
 .contacto__fila:nth-child(1) dt::before { background: var(--rosa-suave); color: var(--rosa-suave); }
-.contacto__fila:nth-child(2) dt::before { background: #2fe173; color: #2fe173; }
-.contacto__fila:nth-child(3) dt::before { background: #ff7a45; color: #ff7a45; }
-.contacto__fila:nth-child(4) dt::before { background: #5aa9ff; color: #5aa9ff; }
+.contacto__fila:nth-child(2) dt::before { background: #ffd84d; color: #ffd84d; }
+.contacto__fila:nth-child(3) dt::before { background: #ff2d8f; color: #ff2d8f; }
+.contacto__fila:nth-child(4) dt::before { background: #dbe3ee; color: #dbe3ee; }
 .contacto__fila:nth-child(5) dt::before { background: var(--cal); color: var(--cal); }
 .contacto__fila dd { font-size: 1.12rem; }
 .contacto__whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(120deg, #2fe173 0%, #128c7e 100%);
+  background: linear-gradient(120deg, var(--anil) 0%, var(--anil-profundo) 100%);
   color: #fff;
   font-weight: 700;
   text-decoration: none;
   padding: 9px 18px;
   border-radius: 999px;
-  box-shadow: 0 14px 34px -14px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 14px 34px -14px rgba(20, 42, 67, 0.55);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 .contacto__whatsapp:hover {
   transform: translateY(-2px);
   filter: brightness(1.07);
-  box-shadow: 0 18px 42px -14px rgba(37, 211, 102, 0.75);
+  box-shadow: 0 18px 42px -14px rgba(20, 42, 67, 0.75);
 }
 .contacto__whatsapp svg { flex: none; }
 @media (max-width: 560px) {
